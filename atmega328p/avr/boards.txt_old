@@ -1,0 +1,337 @@
+name=[Gert Sanders boards]
+version=1.0
+
+#menu.cpu=Processor
+menu.mhz=CPU Speed
+menu.bod=Brown Out Detection
+
+############################################################################
+# possible upload speeds: 9600, 14400, 19200, 28800, 38400, 57600, or 115200
+############################################################################
+
+28PinBoard.name=atmega328p based - 28 pin DIL
+
+28PinBoard.upload.tool=arduino:avrdude
+28PinBoard.upload.protocol=arduino
+28PinBoard.upload.maximum_size=32256
+28PinBoard.upload.maximum_data_size=2048
+
+28PinBoard.bootloader.tool=arduino:avrdude
+
+28PinBoard.bootloader.unlock_bits=0x3F
+28PinBoard.bootloader.lock_bits=0x0F
+
+
+28PinBoard.build.core=arduino:arduino
+28PinBoard.build.mcu=atmega328p
+
+28PinBoard.build.board=AVR_GERTSANDERS28PinBoard
+28PinBoard.build.variant=28PinBoard
+
+28PinBoard.menu.bod.4v3=4V3
+28PinBoard.menu.bod.4v3.bootloader.extended_fuses=0x04
+28PinBoard.menu.bod.2v7=2V7
+28PinBoard.menu.bod.2v7.bootloader.extended_fuses=0x05
+28PinBoard.menu.bod.1v8=1V8
+28PinBoard.menu.bod.1v8.bootloader.extended_fuses=0x06
+28PinBoard.menu.bod.off=Disabled
+28PinBoard.menu.bod.off.bootloader.extended_fuses=0x07
+
+
+28PinBoard.menu.mhz.8MiDIV8-4K8-D8= 1Mhz - internal 8MHz CDIV 8 - 4K8 - D8
+28PinBoard.menu.mhz.8MiDIV8-4K8-D8.bootloader.low_fuses=0x62
+28PinBoard.menu.mhz.8MiDIV8-4K8-D8.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.8MiDIV8-4K8-D8.build.f_cpu=1000000L
+28PinBoard.menu.mhz.8MiDIV8-4K8-D8.upload.speed=4800
+28PinBoard.menu.mhz.8MiDIV8-4K8-D8.bootloader.file=myoptiboot/optiboot_atmega328_01M_004800_B0.hex
+
+28PinBoard.menu.mhz.8MiDIV8-4K8-D13= 1Mhz - internal 8MHz CDIV 8 - 4K8 - D13
+28PinBoard.menu.mhz.8MiDIV8-4K8-D13.bootloader.low_fuses=0x62
+28PinBoard.menu.mhz.8MiDIV8-4K8-D13.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.8MiDIV8-4K8-D13.build.f_cpu=1000000L
+28PinBoard.menu.mhz.8MiDIV8-4K8-D13.upload.speed=4800
+28PinBoard.menu.mhz.8MiDIV8-4K8-D13.bootloader.file=myoptiboot/optiboot_atmega328_01M_004800_B5.hex
+
+28PinBoard.menu.mhz.8MiDIV8-9K6-D8= 1Mhz - internal 8MHz CDIV 8 - 9K6 - D8
+28PinBoard.menu.mhz.8MiDIV8-9K6-D8.bootloader.low_fuses=0x62
+28PinBoard.menu.mhz.8MiDIV8-9K6-D8.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.8MiDIV8-9K6-D8.build.f_cpu=1000000L
+28PinBoard.menu.mhz.8MiDIV8-9K6-D8.upload.speed=9600
+28PinBoard.menu.mhz.8MiDIV8-9K6-D8.bootloader.file=myoptiboot/optiboot_atmega328_01M_009600_B0.hex
+
+28PinBoard.menu.mhz.1M-9K6-D8= 1Mhz - crystal - 9K6 - D8
+28PinBoard.menu.mhz.1M-9K6-D8.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.1M-9K6-D8.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.1M-9K6-D8.build.f_cpu=1000000L
+28PinBoard.menu.mhz.1M-9K6-D8.upload.speed=9600
+28PinBoard.menu.mhz.1M-9K6-D8.bootloader.file=myoptiboot/optiboot_atmega328_01M_009600_B0.hex
+
+28PinBoard.menu.mhz.4M-19K2-D8= 4Mhz - crystal - 19K2 - D8
+28PinBoard.menu.mhz.4M-19K2-D8.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.4M-19K2-D8.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.4M-19K2-D8.build.f_cpu=4000000L
+28PinBoard.menu.mhz.4M-19K2-D8.upload.speed=19200
+28PinBoard.menu.mhz.4M-19K2-D8.bootloader.file=myoptiboot/optiboot_atmega328_04M_019200_B0.hex
+
+28PinBoard.menu.mhz.8Mi-9K6-D8= 8Mhz - internal - 9K6 - D8
+28PinBoard.menu.mhz.8Mi-9K6-D8.bootloader.low_fuses=0xE2
+28PinBoard.menu.mhz.8Mi-9K6-D8.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.8Mi-9K6-D8.build.f_cpu=8000000L
+28PinBoard.menu.mhz.8Mi-9K6-D8.upload.speed=9600
+28PinBoard.menu.mhz.8Mi-9K6-D8.bootloader.file=myoptiboot/optiboot_atmega328_08M_009600_B0.hex
+
+28PinBoard.menu.mhz.8Mi-38K4-D6= 8Mhz - internal - 38K4 - D6
+28PinBoard.menu.mhz.8Mi-38K4-D6.bootloader.low_fuses=0xE2
+28PinBoard.menu.mhz.8Mi-38K4-D6.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.8Mi-38K4-D6.build.f_cpu=8000000L 
+28PinBoard.menu.mhz.8Mi-38K4-D6.upload.speed=38400
+28PinBoard.menu.mhz.8Mi-38K4-D6.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_D6.hex
+
+28PinBoard.menu.mhz.8Mi-38K4-D8= 8Mhz - internal - 38K4 - D8
+28PinBoard.menu.mhz.8Mi-38K4-D8.bootloader.low_fuses=0xE2
+28PinBoard.menu.mhz.8Mi-38K4-D8.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.8Mi-38K4-D8.build.f_cpu=8000000L 
+28PinBoard.menu.mhz.8Mi-38K4-D8.upload.speed=38400
+28PinBoard.menu.mhz.8Mi-38K4-D8.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_B0.hex
+
+28PinBoard.menu.mhz.8M-38K4-D8= 8Mhz - crystal - 38K4 - D8
+28PinBoard.menu.mhz.8M-38K4-D8.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.8M-38K4-D8.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.8M-38K4-D8.build.f_cpu=8000000L 
+28PinBoard.menu.mhz.8M-38K4-D8.upload.speed=38400
+28PinBoard.menu.mhz.8M-38K4-D8.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_B0.hex
+
+28PinBoard.menu.mhz.8M-38K4-D5= 8Mhz - crystal - 38K4 - D5
+28PinBoard.menu.mhz.8M-38K4-D5.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.8M-38K4-D5.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.8M-38K4-D5.build.f_cpu=8000000L
+28PinBoard.menu.mhz.8M-38K4-D5.upload.speed=38400
+28PinBoard.menu.mhz.8M-38K4-D5.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_D5.hex
+
+28PinBoard.menu.mhz.8M-38K4-D6= 8Mhz - crystal - 38K4 - D6
+28PinBoard.menu.mhz.8M-38K4-D6.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.8M-38K4-D6.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.8M-38K4-D6.build.f_cpu=8000000L 
+28PinBoard.menu.mhz.8M-38K4-D6.upload.speed=38400
+28PinBoard.menu.mhz.8M-38K4-D6.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_D6.hex
+
+28PinBoard.menu.mhz.16M57=16Mhz - crystal - 57K6 - D8
+28PinBoard.menu.mhz.16M57.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.16M57.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.16M57.build.f_cpu=16000000L
+28PinBoard.menu.mhz.16M57.upload.speed=57600
+28PinBoard.menu.mhz.16M57.bootloader.file=myoptiboot/optiboot_atmega328_16M_057600_B0.hex
+
+28PinBoard.menu.mhz.16M74=16Mhz - crystal - 74K8 - D8
+28PinBoard.menu.mhz.16M74.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.16M74.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.16M74.build.f_cpu=16000000L
+28PinBoard.menu.mhz.16M74.upload.speed=74880 
+28PinBoard.menu.mhz.16M74.bootloader.file=myoptiboot/optiboot_atmega328_16M_074880_B0.hex
+
+28PinBoard.menu.mhz.16M76=16Mhz - crystal - 76K8 - D8
+28PinBoard.menu.mhz.16M76.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.16M76.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.16M76.build.f_cpu=16000000L
+28PinBoard.menu.mhz.16M76.upload.speed=76800 
+28PinBoard.menu.mhz.16M76.bootloader.file=myoptiboot/optiboot_atmega328_16M_076800_B0.hex
+
+28PinBoard.menu.mhz.16M115=16Mhz - crystal - 115K2 - D8
+28PinBoard.menu.mhz.16M115.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.16M115.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.16M115.build.f_cpu=16000000L
+28PinBoard.menu.mhz.16M115.upload.speed=115200 
+28PinBoard.menu.mhz.16M115.bootloader.file=myoptiboot/optiboot_atmega328_16M_115200_B0.hex
+
+28PinBoard.menu.mhz.16M230=16Mhz - crystal - 230K4 - D8
+28PinBoard.menu.mhz.16M230.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.16M230.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.16M230.build.f_cpu=16000000L
+28PinBoard.menu.mhz.16M230.upload.speed=230400 
+28PinBoard.menu.mhz.16M230.bootloader.file=myoptiboot/optiboot_atmega328_16M_230400_B0.hex
+
+28PinBoard.menu.mhz.20M115=20Mhz - crystal - 115K2 - D8
+28PinBoard.menu.mhz.20M115.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.20M115.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.20M115.build.f_cpu=20000000L
+28PinBoard.menu.mhz.20M115.upload.speed=115200 
+28PinBoard.menu.mhz.20M115.bootloader.file=myoptiboot/optiboot_atmega328_20M_115200_B0.hex
+
+28PinBoard.menu.mhz.20M230=20Mhz - crystal - 230K4 - D8
+28PinBoard.menu.mhz.20M230.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.20M230.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.20M230.build.f_cpu=20000000L
+28PinBoard.menu.mhz.20M230.upload.speed=230400 
+28PinBoard.menu.mhz.20M230.bootloader.file=myoptiboot/optiboot_atmega328_20M_230400_B0.hex
+
+28PinBoard.menu.mhz.20M250=20Mhz - crystal - 250K - D8
+28PinBoard.menu.mhz.20M250.bootloader.low_fuses=0xFF
+28PinBoard.menu.mhz.20M250.bootloader.high_fuses=0xDE
+28PinBoard.menu.mhz.20M250.build.f_cpu=20000000L
+28PinBoard.menu.mhz.20M250.upload.speed=250000 
+28PinBoard.menu.mhz.20M250.bootloader.file=myoptiboot/optiboot_atmega328_20M_250000_B0.hex
+
+
+############################################################################
+
+32PinBoard.name=atmega328p based - 32 pin TQFP
+
+32PinBoard.upload.tool=arduino:avrdude
+32PinBoard.upload.protocol=arduino
+32PinBoard.upload.maximum_size=32256
+32PinBoard.upload.maximum_data_size=2048
+
+32PinBoard.bootloader.tool=arduino:avrdude
+
+32PinBoard.bootloader.unlock_bits=0x3F
+32PinBoard.bootloader.lock_bits=0x0F
+
+
+32PinBoard.build.core=arduino:arduino
+32PinBoard.build.mcu=atmega328p
+
+32PinBoard.build.board=AVR_GERTSANDERS32PinBoard
+32PinBoard.build.variant=32PinBoard
+
+32PinBoard.menu.bod.4v3=4V3
+32PinBoard.menu.bod.4v3.bootloader.extended_fuses=0x04
+32PinBoard.menu.bod.2v7=2V7
+32PinBoard.menu.bod.2v7.bootloader.extended_fuses=0x05
+32PinBoard.menu.bod.1v8=1V8
+32PinBoard.menu.bod.1v8.bootloader.extended_fuses=0x06
+32PinBoard.menu.bod.off=Disabled
+32PinBoard.menu.bod.off.bootloader.extended_fuses=0x07
+
+
+32PinBoard.menu.mhz.8MiDIV8-4K8-D8= 1Mhz - internal 8MHz CDIV 8 - 4K8 - D8
+32PinBoard.menu.mhz.8MiDIV8-4K8-D8.bootloader.low_fuses=0x62
+32PinBoard.menu.mhz.8MiDIV8-4K8-D8.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.8MiDIV8-4K8-D8.build.f_cpu=1000000L
+32PinBoard.menu.mhz.8MiDIV8-4K8-D8.upload.speed=4800
+32PinBoard.menu.mhz.8MiDIV8-4K8-D8.bootloader.file=myoptiboot/optiboot_atmega328_01M_004800_B0.hex
+
+32PinBoard.menu.mhz.8MiDIV8-4K8-D13= 1Mhz - internal 8MHz CDIV 8 - 4K8 - D13
+32PinBoard.menu.mhz.8MiDIV8-4K8-D13.bootloader.low_fuses=0x62
+32PinBoard.menu.mhz.8MiDIV8-4K8-D13.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.8MiDIV8-4K8-D13.build.f_cpu=1000000L
+32PinBoard.menu.mhz.8MiDIV8-4K8-D13.upload.speed=4800
+32PinBoard.menu.mhz.8MiDIV8-4K8-D13.bootloader.file=myoptiboot/optiboot_atmega328_01M_004800_B5.hex
+
+32PinBoard.menu.mhz.8MiDIV8-9K6-D8= 1Mhz - internal 8MHz CDIV 8 - 9K6 - D8
+32PinBoard.menu.mhz.8MiDIV8-9K6-D8.bootloader.low_fuses=0x62
+32PinBoard.menu.mhz.8MiDIV8-9K6-D8.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.8MiDIV8-9K6-D8.build.f_cpu=1000000L
+32PinBoard.menu.mhz.8MiDIV8-9K6-D8.upload.speed=9600
+32PinBoard.menu.mhz.8MiDIV8-9K6-D8.bootloader.file=myoptiboot/optiboot_atmega328_01M_009600_B0.hex
+
+32PinBoard.menu.mhz.1M-9K6-D8= 1Mhz - crystal - 9K6 - D8
+32PinBoard.menu.mhz.1M-9K6-D8.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.1M-9K6-D8.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.1M-9K6-D8.build.f_cpu=1000000L
+32PinBoard.menu.mhz.1M-9K6-D8.upload.speed=9600
+32PinBoard.menu.mhz.1M-9K6-D8.bootloader.file=myoptiboot/optiboot_atmega328_01M_009600_B0.hex
+
+32PinBoard.menu.mhz.4M-19K2-D8= 4Mhz - crystal - 19K2 - D8
+32PinBoard.menu.mhz.4M-19K2-D8.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.4M-19K2-D8.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.4M-19K2-D8.build.f_cpu=4000000L
+32PinBoard.menu.mhz.4M-19K2-D8.upload.speed=19200
+32PinBoard.menu.mhz.4M-19K2-D8.bootloader.file=myoptiboot/optiboot_atmega328_04M_019200_B0.hex
+
+32PinBoard.menu.mhz.8Mi-9K6-D8= 8Mhz - internal - 9K6 - D8
+32PinBoard.menu.mhz.8Mi-9K6-D8.bootloader.low_fuses=0xE2
+32PinBoard.menu.mhz.8Mi-9K6-D8.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.8Mi-9K6-D8.build.f_cpu=8000000L
+32PinBoard.menu.mhz.8Mi-9K6-D8.upload.speed=9600
+32PinBoard.menu.mhz.8Mi-9K6-D8.bootloader.file=myoptiboot/optiboot_atmega328_08M_009600_B0.hex
+
+32PinBoard.menu.mhz.8Mi-38K4-D6= 8Mhz - internal - 38K4 - D6
+32PinBoard.menu.mhz.8Mi-38K4-D6.bootloader.low_fuses=0xE2
+32PinBoard.menu.mhz.8Mi-38K4-D6.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.8Mi-38K4-D6.build.f_cpu=8000000L 
+32PinBoard.menu.mhz.8Mi-38K4-D6.upload.speed=38400
+32PinBoard.menu.mhz.8Mi-38K4-D6.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_D6.hex
+
+32PinBoard.menu.mhz.8Mi-38K4-D8= 8Mhz - internal - 38K4 - D8
+32PinBoard.menu.mhz.8Mi-38K4-D8.bootloader.low_fuses=0xE2
+32PinBoard.menu.mhz.8Mi-38K4-D8.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.8Mi-38K4-D8.build.f_cpu=8000000L 
+32PinBoard.menu.mhz.8Mi-38K4-D8.upload.speed=38400
+32PinBoard.menu.mhz.8Mi-38K4-D8.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_B0.hex
+
+32PinBoard.menu.mhz.8M-38K4-D8= 8Mhz - crystal - 38K4 - D8
+32PinBoard.menu.mhz.8M-38K4-D8.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.8M-38K4-D8.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.8M-38K4-D8.build.f_cpu=8000000L 
+32PinBoard.menu.mhz.8M-38K4-D8.upload.speed=38400
+32PinBoard.menu.mhz.8M-38K4-D8.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_B0.hex
+
+32PinBoard.menu.mhz.8M-38K4-D5= 8Mhz - crystal - 38K4 - D5
+32PinBoard.menu.mhz.8M-38K4-D5.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.8M-38K4-D5.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.8M-38K4-D5.build.f_cpu=8000000L
+32PinBoard.menu.mhz.8M-38K4-D5.upload.speed=38400
+32PinBoard.menu.mhz.8M-38K4-D5.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_D5.hex
+
+32PinBoard.menu.mhz.8M-38K4-D6= 8Mhz - crystal - 38K4 - D6
+32PinBoard.menu.mhz.8M-38K4-D6.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.8M-38K4-D6.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.8M-38K4-D6.build.f_cpu=8000000L 
+32PinBoard.menu.mhz.8M-38K4-D6.upload.speed=38400
+32PinBoard.menu.mhz.8M-38K4-D6.bootloader.file=myoptiboot/optiboot_atmega328_08M_038400_D6.hex
+
+32PinBoard.menu.mhz.16M57=16Mhz - crystal - 57K6 - D8
+32PinBoard.menu.mhz.16M57.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.16M57.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.16M57.build.f_cpu=16000000L
+32PinBoard.menu.mhz.16M57.upload.speed=57600
+32PinBoard.menu.mhz.16M57.bootloader.file=myoptiboot/optiboot_atmega328_16M_057600_B0.hex
+
+32PinBoard.menu.mhz.16M74=16Mhz - crystal - 74K8 - D8
+32PinBoard.menu.mhz.16M74.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.16M74.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.16M74.build.f_cpu=16000000L
+32PinBoard.menu.mhz.16M74.upload.speed=74880 
+32PinBoard.menu.mhz.16M74.bootloader.file=myoptiboot/optiboot_atmega328_16M_074880_B0.hex
+
+32PinBoard.menu.mhz.16M76=16Mhz - crystal - 76K8 - D8
+32PinBoard.menu.mhz.16M76.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.16M76.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.16M76.build.f_cpu=16000000L
+32PinBoard.menu.mhz.16M76.upload.speed=76800 
+32PinBoard.menu.mhz.16M76.bootloader.file=myoptiboot/optiboot_atmega328_16M_076800_B0.hex
+
+32PinBoard.menu.mhz.16M115=16Mhz - crystal - 115K2 - D8
+32PinBoard.menu.mhz.16M115.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.16M115.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.16M115.build.f_cpu=16000000L
+32PinBoard.menu.mhz.16M115.upload.speed=115200 
+32PinBoard.menu.mhz.16M115.bootloader.file=myoptiboot/optiboot_atmega328_16M_115200_B0.hex
+
+32PinBoard.menu.mhz.16M230=16Mhz - crystal - 230K4 - D8
+32PinBoard.menu.mhz.16M230.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.16M230.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.16M230.build.f_cpu=16000000L
+32PinBoard.menu.mhz.16M230.upload.speed=230400 
+32PinBoard.menu.mhz.16M230.bootloader.file=myoptiboot/optiboot_atmega328_16M_230400_B0.hex
+
+32PinBoard.menu.mhz.20M115=20Mhz - crystal - 115K2 - D8
+32PinBoard.menu.mhz.20M115.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.20M115.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.20M115.build.f_cpu=20000000L
+32PinBoard.menu.mhz.20M115.upload.speed=115200 
+32PinBoard.menu.mhz.20M115.bootloader.file=myoptiboot/optiboot_atmega328_20M_115200_B0.hex
+
+32PinBoard.menu.mhz.20M230=20Mhz - crystal - 230K4 - D8
+32PinBoard.menu.mhz.20M230.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.20M230.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.20M230.build.f_cpu=20000000L
+32PinBoard.menu.mhz.20M230.upload.speed=230400 
+32PinBoard.menu.mhz.20M230.bootloader.file=myoptiboot/optiboot_atmega328_20M_230400_B0.hex
+
+32PinBoard.menu.mhz.20M250=20Mhz - crystal - 250K - D8
+32PinBoard.menu.mhz.20M250.bootloader.low_fuses=0xFF
+32PinBoard.menu.mhz.20M250.bootloader.high_fuses=0xDE
+32PinBoard.menu.mhz.20M250.build.f_cpu=20000000L
+32PinBoard.menu.mhz.20M250.upload.speed=250000 
+32PinBoard.menu.mhz.20M250.bootloader.file=myoptiboot/optiboot_atmega328_20M_250000_B0.hex
